@@ -9,6 +9,8 @@ import tools.jackson.databind.json.JsonMapper;
 import java.util.List;
 import java.util.Map;
 
+@RestController
+@RequestMapping("/api")
 public class AlbumRestController {
     private AlbumService albumService;
     private JsonMapper jsonMapper;
