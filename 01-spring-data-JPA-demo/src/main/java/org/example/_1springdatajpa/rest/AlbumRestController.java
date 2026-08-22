@@ -56,5 +56,18 @@ public class AlbumRestController {
 
         return dbAlbum;
     }
+    @DeleteMapping("/album/{albumId}")
+    public String deleteAlbum(@PathVariable int albumId) {
+
+        Album tempAlbum = albumService.AlbumFindID(albumId);
+
+        if (tempAlbum == null) {
+            throw new RuntimeException("No se encontro album ID: " + albumId);
+        }
+
+        albumService.deleteByID(albumId);
+
+        return "ID del album borrado: " + albumId;
+    }
 }
 
