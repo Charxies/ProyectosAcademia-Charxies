@@ -2,7 +2,7 @@ package org.example._1springdatajpa.dao;
 import org.example._1springdatajpa.entity.Album;
 import java.util.List;
 
-public interface albumDAO {
+public interface AlbumDAO {
     //interfaz para definir contrato
     List<Album> findAll();
     Album AlbumFindID(int id);

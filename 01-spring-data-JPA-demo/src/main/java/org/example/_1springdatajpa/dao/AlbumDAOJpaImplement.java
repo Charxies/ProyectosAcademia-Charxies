@@ -9,14 +9,14 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class albumDAOJpaImplement implements albumDAO{
+public class AlbumDAOJpaImplement implements AlbumDAO{
 
     //entity manager para manejar lo que pediremos
     private EntityManager entityManager;
 
     //injeccion de constructor
     @Autowired
-    public albumDAOJpaImplement(EntityManager entityManager){
+    public AlbumDAOJpaImplement(EntityManager entityManager){
         this.entityManager = entityManager;
     }
 
