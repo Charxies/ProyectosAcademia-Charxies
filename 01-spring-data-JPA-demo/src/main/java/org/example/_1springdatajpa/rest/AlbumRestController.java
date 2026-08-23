@@ -21,29 +21,29 @@ public class AlbumRestController {
         this.jsonMapper = jsonMapper;
     }
 
-    @GetMapping("/album")
+    @GetMapping("/album_directory")
     public List<Album> findAll(){return albumService.findAll();}
-    @GetMapping("/album/{albumId}")
+    @GetMapping("/album_directory/{albumId}")
     public Album getAlbum(@PathVariable int albumId){
         Album album = albumService.AlbumFindID(albumId);
         if (album == null){throw new RuntimeException("No se encontro album ID: "+albumId);}
         return  album;
     }
-    @PostMapping("/album")
+    @PostMapping("/album_directory")
     public Album postAlbum(@RequestBody Album album){
         album.setId(0);
         Album dbAlbum = albumService.albumSave(album);
         return  dbAlbum;
     }
 
-    @PutMapping("/album")
+    @PutMapping("/album_directory")
     public Album updateAlbum(@RequestBody Album album){
 
         Album dbAlbum = albumService.albumSave(album);
         return dbAlbum;
     }
 
-    @PatchMapping("/album/{albumId}")
+    @PatchMapping("/album_directory/{albumId}")
     public  Album patchAlbum(@PathVariable int albumId, @RequestBody Map<String, Object> patchPayload){
         Album tempAlbum = albumService.AlbumFindID(albumId);
         if (tempAlbum == null) {
@@ -58,7 +58,7 @@ public class AlbumRestController {
 
         return dbAlbum;
     }
-    @DeleteMapping("/album/{albumId}")
+    @DeleteMapping("/album_directory/{albumId}")
     public String deleteAlbum(@PathVariable int albumId) {
 
         Album tempAlbum = albumService.AlbumFindID(albumId);
