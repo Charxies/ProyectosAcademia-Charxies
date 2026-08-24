@@ -62,5 +62,20 @@ CREATE TABLE album (
 ````
 ---
 
-### Postman 
-#### == Pruebas con postman ==
+### Pruebas
+#### == Pruebas con post ==
+
+para hacer las pruebas con post utilizamos el siguiente 
+script (lo voy a dejar formatteado y uno de prueba:
+
+````bash
+curl -X POST http://localhost:8080/api/albums ^
+  -H "Content-Type: application/json" ^
+  -d "{\"titulo\":\"Nutshell\",\"artista\":\"Alice in Chains\",\"genero\":\"Grunge\",\"anio\":1994}"
+````
+Formato de curl:
+````bash
+curl -X POST http://localhost:8080/api/albums ^
+  -H "Content-Type: application/json" ^
+  -d "{\"titulo\":\"\",\"artista\":\"\",\"genero\":\"\",\"anio\":}"
+````
