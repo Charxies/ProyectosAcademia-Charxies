@@ -24,16 +24,12 @@ public class AlbumServiceImplement implements AlbumService{
 
     @Override
     public Album AlbumFindID(int id) {
-        return null;
+        return albumDAO.AlbumFindID(id);
     }
-
     @Override
     public Album albumSave(Album album) {
-        return null;
+        return albumDAO.albumSave(album);
     }
-
     @Override
-    public void deleteByID(int id) {
-
-    }
+    public void deleteByID(int id) { albumDAO.deleteByID(id);}
 }
