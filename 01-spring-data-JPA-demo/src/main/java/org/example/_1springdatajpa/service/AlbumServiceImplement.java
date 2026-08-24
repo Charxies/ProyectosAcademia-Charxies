@@ -1,5 +1,6 @@
 package org.example._1springdatajpa.service;
 
+import jakarta.transaction.Transactional;
 import org.example._1springdatajpa.dao.AlbumDAO;
 import org.example._1springdatajpa.entity.Album;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,10 +27,12 @@ public class AlbumServiceImplement implements AlbumService{
     public Album AlbumFindID(int id) {
         return albumDAO.AlbumFindID(id);
     }
+    @Transactional
     @Override
     public Album albumSave(Album album) {
         return albumDAO.albumSave(album);
     }
+    @Transactional
     @Override
     public void deleteByID(int id) { albumDAO.deleteByID(id);}
 }
