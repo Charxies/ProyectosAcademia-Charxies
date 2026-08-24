@@ -24,16 +24,16 @@ public class AlbumRestController {
     @GetMapping("/album_directory")
     public List<Album> findAll(){return albumService.findAll();}
     @GetMapping("/album_directory/{albumId}")
-    public Album getAlbum(@PathVariable int albumId){
-        Album album = albumService.AlbumFindID(albumId);
+    public Album getAlbum(@PathVariable String albumId){
+        Album album = albumService.albumFindID(albumId);
         if (album == null){throw new RuntimeException("No se encontro album ID: "+albumId);}
         return  album;
     }
     @PostMapping("/album_directory")
-    public Album postAlbum(@RequestBody Album album){
-        album.setId(0);
+    public Album addAlbum(@RequestBody Album album){
+        album.setId(null);
         Album dbAlbum = albumService.albumSave(album);
-        return  dbAlbum;
+        return dbAlbum;
     }
 
     @PutMapping("/album_directory")
@@ -44,8 +44,8 @@ public class AlbumRestController {
     }
 
     @PatchMapping("/album_directory/{albumId}")
-    public  Album patchAlbum(@PathVariable int albumId, @RequestBody Map<String, Object> patchPayload){
-        Album tempAlbum = albumService.AlbumFindID(albumId);
+    public  Album patchAlbum(@PathVariable String albumId, @RequestBody Map<String, Object> patchPayload){
+        Album tempAlbum = albumService.albumFindID(albumId);
         if (tempAlbum == null) {
             throw new RuntimeException("No se encontro album ID: " + albumId);
         }
@@ -59,15 +59,15 @@ public class AlbumRestController {
         return dbAlbum;
     }
     @DeleteMapping("/album_directory/{albumId}")
-    public String deleteAlbum(@PathVariable int albumId) {
+    public String deleteAlbum(@PathVariable String albumId) {
 
-        Album tempAlbum = albumService.AlbumFindID(albumId);
+        Album tempAlbum = albumService.albumFindID(albumId);
 
         if (tempAlbum == null) {
             throw new RuntimeException("No se encontro album ID: " + albumId);
         }
 
-        albumService.deleteByID(albumId);
+        albumService.deleteByID( albumId);
 
         return "ID del album borrado: " + albumId;
     }
