@@ -1,5 +1,4 @@
 target/
-!Semana 2/02-spring-data-mongodb/Rest_Api_Crud_Springboot_MongoDB/.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 .kotlin
