@@ -11,6 +11,15 @@
         <option value="$PROJECT_DIR$/Semana 2/spring-data-JPA-mongo-inyeccion/Semana 2/02-spring-data-mongodb/02-spring-data-Mongo-demo/pom.xml" />
         <option value="$PROJECT_DIR$/Semana 2/spring-data-JPA-mongo-inyeccion/Semana 2/01-spring-data-JPA-demo/pom.xml" />
         <option value="$PROJECT_DIR$/Semana 2/spring-data-JPA-mongo-inyeccion/Semana 3/01-spring-data-JPA-JWT/spring_data_JPA_JWT/pom.xml" />
+        <option value="$PROJECT_DIR$/Semana 3/Entregables/Reactive/01-webflux-mono/pom.xml" />
+        <option value="$PROJECT_DIR$/Semana 3/Entregables/Reactive/02-webflux-flux/pom.xml" />
+        <option value="$PROJECT_DIR$/Semana 3/Entregables/Security/01-security-basic/pom.xml" />
+        <option value="$PROJECT_DIR$/Semana 3/Entregables/Security/02-security-jwt/pom.xml" />
+        <option value="$PROJECT_DIR$/Semana 3/Entregables/Security/03-security-oauth2/pom.xml" />
+        <option value="$PROJECT_DIR$/Semana 3/Entregables/Unit Testing/proyectos/01-junit-fundamentos/pom.xml" />
+        <option value="$PROJECT_DIR$/Semana 3/Entregables/Unit Testing/proyectos/02-junit-catalogo/pom.xml" />
+        <option value="$PROJECT_DIR$/Semana 3/Entregables/Unit Testing/proyectos/03-junit-datos/pom.xml" />
+        <option value="$PROJECT_DIR$/Semana 3/Entregables/Unit Testing/proyectos/04-mockito-dobles/pom.xml" />
       </list>
     </option>
   </component>
